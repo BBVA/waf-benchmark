@@ -1,0 +1,2 @@
+class WAFBenchmark(Exception):
+    pass
