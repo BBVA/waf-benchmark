@@ -19,6 +19,11 @@ BASE_DATA_SETS = "datasets"
 DATA_SETS_SQLI = (
     ('sqlmap', 'sqlmap.txt'),
     ('OWASP ZAP', 'zap.txt'),
+    ('Darkweb 2017 Top 10000', 'darkweb2017-top10000.txt'),
+    ('Family Names USA Top 1000', 'familynames-usa-top1000.txt'),
+    ('Female Names USA Top 1000', 'femalenames-usa-top1000.txt'),
+    ('Male Names USATop 1000', 'malenames-usa-top1000.txt'),
+    ('Names', 'names.txt'),
 )
 
 ATTACKS_TYPES = (
