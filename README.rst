@@ -58,13 +58,19 @@ How use
 2. Launch waf-benchmark over the waf server address
 ---------------------------------------------------
 You have multiples kind of benchmarking
+
 - For demo you can limit the number of results and list payloads summary
+
 .. highlight:: bash
 python -m  waf_benchmark http://localhost:8000 --list-payloads -M 2
+
 - List all benchmarks
+
 .. highlight:: bash
 python -m  waf_benchmark http://localhost:8000 --list-payloads
+
 - This can take a long time(~ 55000 requests), send the output to a file
+
 .. highlight:: bash
 python -m  waf_benchmark http://localhost:8000 --list-payloads >> output_bench.txt
 
