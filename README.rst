@@ -43,3 +43,28 @@ Working modes
 -------------
 
 - Testing mode: use
+
+How install
+-----------
+.. highlight:: bash
+pip install -e .
+
+How use
+-------
+1. Launch the waf server and the application server
+---------------------------------------------------
+`This is a example repo for launch modsecurity server with express server <https://github.com/theonemule/docker-waf>`
+
+2. Launch waf-benchmark over the waf server address
+---------------------------------------------------
+You have multiples kind of benchmarking
+- For demo you can limit the number of results and list payloads summary
+.. highlight:: bash
+python -m  waf_benchmark http://localhost:8000 --list-payloads -M 2
+- List all benchmarks
+.. highlight:: bash
+python -m  waf_benchmark http://localhost:8000 --list-payloads
+- This can take a long time(~ 55000 requests), send the output to a file
+.. highlight:: bash
+python -m  waf_benchmark http://localhost:8000 --list-payloads >> output_bench.txt
+
