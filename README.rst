@@ -74,3 +74,30 @@ python -m  waf_benchmark http://localhost:8000 --list-payloads
 .. highlight:: bash
 python -m  waf_benchmark http://localhost:8000 --list-payloads >> output_bench.txt
 
+Other Options
+=============
+
+usage: __main__.py [-h] [-v] [-c CONCURRENCY] [-D {screen} [{screen} ...]]
+                   [-p] [-o DUMP_FILE] [-S] [-M MAXIMUM_ATTACKS]
+                   WAF_URL
+
+WAF-Bench: a benchmarking test for WAF systems
+
+positional arguments:
+  WAF_URL               Application access
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -v, --verbosity       verbosity level: -v, -vv, -vvv.
+
+Output options:
+  -c CONCURRENCY, --concurrency CONCURRENCY
+                        maximum concurrency (default: 50)
+  -D {screen} [{screen} ...], --dump-mode {screen} [{screen} ...]
+                        how to dump the information (default: screen)
+  -p, --list-payloads   list payloads that a WAF can't block (default: False)
+  -o DUMP_FILE, --dump-file DUMP_FILE
+                        file path to dump results
+  -S                    don't check connection to WAF before start tests (default: False)
+  -M MAXIMUM_ATTACKS, --maximum-attacks MAXIMUM_ATTACKS
+                        maximum number of attacks to do per data set (default: all)
