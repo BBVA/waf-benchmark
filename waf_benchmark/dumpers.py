@@ -42,16 +42,6 @@ def dump_screen(results: Dict[str, Tuple[Tuple[str, str, str]]],
         print("=" * len(f"Attack type: {attack_type}"))
         print()
 
-        for c in content:
-            tool_name, payload, http_code = c
-
-            total_blocked[tool_name] += 1 if http_code == 403 else 0
-            total[tool_name] += 1
-
-            if str(http_code).startswith("2"):
-                total_success[tool_name] += 1
-                success_attacks[tool_name].append(payload)
-
         for tool_name in total.keys():
             cols.append([
                 tool_name,
